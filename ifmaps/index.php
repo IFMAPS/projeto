@@ -12,16 +12,17 @@
     <main class="container">
         
         <div class="box1">
-            <img class="logo" src="_estaticos/_imagens/_logoIF.png" alt="">
-            <h1>IFMAPS</h1>           
+            <img class="logo" src="_estaticos/_imagens/_logoIF2.png" alt="">           
         </div>
 
         <div class="box2">
             
+            <h1>LOGIN</h1>
+
             <form action="">
                 <input type="user" placeholder="Usuário">
                 <input type="password" placeholder="Senha">
-                <button class="botao" type="submit">Entrar</button>
+                <button class="botao" type="submit">Acessar</button>
                 <a href="_templates/_cadastro.php"><strong>Criar conta gratuita</strong></a>
         
             </form>

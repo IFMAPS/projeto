@@ -11,11 +11,14 @@
 <body>
     <main class="container">
         <div class="box1">
-            <img class="logo" src="../_estaticos/_imagens/_logoIF.png" alt="">
-            <h1>CADASTRO</h1>            
+            <img class="logo" src="../_estaticos/_imagens/_logoIF2.png" alt="">
+            
         </div>
 
-        <div class="box2">     
+        <div class="box2">  
+        
+            <h1>CADASTRO</h1>   
+        
             <form autocomplete="off" name="FB_formulario" action="">
                 <div class="inputs">
                     <input required type="text" name="nome" placeholder="Nome completo" maxlength="">

@@ -1,8 +1,8 @@
 @import url("_esquemaCor.css");
 
 @font-face{
-    font-family: TransformersMovie;
-    src: url("../_fontes/TransformersMovie.ttf");
+    font-family: BebasRegular;
+    src: url("../_fontes/BebasRegular.ttf");
 }
 
 @font-face{
@@ -21,35 +21,59 @@ html{
 }
 
 body{
-    background-image: url("../_imagens/_fundo.jpg");
+    background-image: url("../_imagens/_fundo2.jpg");
+    background-size: cover;
     font-size: 1.6rem;
 }
 
+
 .container{
-    display: flex;
-    flex-wrap: wrap;
     height: auto;
     width: 100%;
-    max-width: 500px;
+    max-width: 800px;
+    display: flex;
+    align-content: center;
     justify-content: center;
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
-    /* background-color: rgba(94, 26, 92, 0.761); */
+    transform: translate(-50%, 0%);
+    
+    background-color: var(--cinza-claro);
 }
 
 .container > div{
-    margin: 0 20px;
-   
+    margin: 20px 20px;
 }
+
+.container > div:nth-child(1){
+    /* display: block; */
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+
+    /* background-color: brown; */
+}
+
+.container > div:nth-child(2){
+    /* display: block; */
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+
+    /* background-color: rgb(42, 165, 58); */
+}
+
+
 
 .box1{
     position: relative;
     height: auto;
     width: 100%;
     max-width: 400px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
 
     /* background-color: blue; */
 }
@@ -58,26 +82,30 @@ body{
     height: auto;
     width: 100%;
     max-width: 400px;
+    padding: 50px 20px 20px 20px;
 
-    /* background-color: rgba(16, 13, 170, 0.255); */
+    background-color: #ffffff28;
 }
 
 .logo{
-    align-items: center;
-    display: block;
-    height: 210px;
-    width: 210px;
+    height: 310px;
+    width: 310px;
+
 }
+
 
 h1{
     font-size: 4rem;
-    font-family: TransformersMovie;
+    font-family: BebasRegular;
     text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.2);
-    text-align: center;
+    /* text-align: center; */
+    padding-bottom: 20px;
     color: rgb(200, 200, 200);
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: var(--preto);
+    letter-spacing: 0.1em;
 }  
+
 
 
 
@@ -88,7 +116,7 @@ input{
     font-size: 1.6rem;
     font-family: JonahAFYL;
     border: none;
-    border-radius: 0px 10px 0px 10px;
+    border-radius: 10px;
     margin-bottom: 15px;
     height: 40px;
     width: 100%;
@@ -103,12 +131,11 @@ input{
     font-size: 1.6rem;
     font-family: JonahAFYL;
     border: none;
-    border-bottom: 5px solid #d53d01;
-    border-radius: 0px 10px 0px 10px;
+    border-radius: 10px;
     height: 40px;
     width: 100%;
     color: white;
-    background-color: var(--laranja);  
+    background-color: var(--azul);  
     outline: none; 
 }
 
@@ -123,9 +150,9 @@ input[type=password]:hover, input[type=password]:focus
 .botao:hover, .botao:focus{
     width: 100%;
     border: none;
-    border-bottom: 5px solid #a51c07;
+    border-bottom: 5px solid var(--azul-dark);
     color: var(--preto);
-    background-color: var(--vermelho-telha);
+    background-color: var(--azul-escuro);
     cursor: pointer;
     font-weight: bolder;
 }
@@ -133,7 +160,7 @@ input[type=password]:hover, input[type=password]:focus
 
 a{
     padding-top: 10px;
-    color: rgb(90, 90, 90);
+    color: var(--branco);
     text-decoration: none;
     text-align: center;
     display: block;
@@ -144,28 +171,28 @@ a{
 
 a:hover, a:focus{
     text-decoration: none;
-    color: rgb(197, 197, 197);
+    color: var(--cinza);
     outline: none;
  
 }
 
 ::-webkit-input-placeholder{
-    color:black;
+    color:var(--preto);
     padding-left: 10px;   
 }
 
 :-moz-placeholder{
-    color:black;
+    color:var(--preto);
     padding-left: 10px;
 }
 
 ::-moz-placeholder{
-    color:black;
+    color:var(--preto);
     padding-left: 10px;
 }
 
 :-ms-input-placeholder{
-    color:black;
+    color:var(--preto);
     padding-left: 10px;
 } 
 
@@ -177,3 +204,65 @@ a:hover, a:focus{
     }
 }
 
+@media (min-width: 900px) and (orientation: landscape){
+    .container{
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+}
+
+@media (max-width: 600px){
+
+    .container{
+        display: grid;
+        top: 0;
+        transform: translate(-50%, 0%);
+    }
+    
+    .container > div:nth-child(2) {
+        max-width: 260px;
+    }
+
+    h1{
+        text-align: center;
+        padding-right: 40px;
+    }
+
+    .box1{
+        justify-content: normal;
+    }
+
+    .box2{
+        background-color: #ffffff00;
+    }
+}
+
+@media (max-width: 375px){
+    .container > div {
+        margin: 0;
+    }
+    
+    .container > div:nth-child(1) {
+        height: auto;
+        width: 100%;
+        max-width: 210px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+    
+    .logo {
+        height: 100%;
+        max-height: 310px;
+        width: 100%;
+        max-width: 310px;
+    }
+}
+
+@media (max-width: 320px){
+    
+    input{
+        margin-top: 5px;
+    }
+    
+}
